@@ -149,7 +149,11 @@ ul {
 .link-icon {
   width: 16px;
   height: 11px;
-  color: black;
+  color: #757575;
+}
+.link-icon:hover,
+.link-icon:focus {
+  color: var(--accent-color);
 }
 
 .contacts-list-item:not(:last-child) {
@@ -240,6 +244,17 @@ ul {
 
 .about-us-list:not(:last-child) {
   margin-right: 30px;
+}
+
+.about-us-icon {
+  background-image: linear-gradient(#f5f4fa, #f5f4fa);
+  background-size: 270px 120px;
+  border-radius: 4px;
+}
+
+.about-us-icon .icon {
+  width: 70px;
+  height: 70px;
 }
 
 .icon {
@@ -347,10 +362,19 @@ ul {
   flex-direction: column;
   align-items: center;
   width: 270px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-item .img {
   margin-bottom: 30px;
+}
+
+.team-list-item:hover,
+.team-list-item:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .titel-name {
@@ -367,6 +391,26 @@ ul {
 }
 .socials-links-item:not(:last-child) {
   margin-right: 10px;
+}
+
+.socials-links-item .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+}
+
+.link .socials-links-icon {
+  fill: #afb1b8;
+}
+
+.socials-links-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .post {
@@ -473,8 +517,38 @@ ul {
   margin: 0;
   padding: 0;
 }
-.socials-list-item:not(:last-child) {
+.socials-list-item-icon:not(:last-child) {
   margin-right: 22px;
+}
+
+.socials-links-item-icon .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-footer {
+  width: 20px;
+  height: 20px;
+}
+.link-footer {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /*background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );*/
+}
+
+.link-footer .socials-links-icon {
+  fill: #ffffff;
+}
+
+.socials-links-icon:focus,
+.socials-links-icon:hover {
+  fill: var(--accent-color);
 }
 /* !!! PORTFOLIO!!! */
 
@@ -533,6 +607,12 @@ ul {
 .gallery-list {
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.gallery-list:hover,
+.gallery-list:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .link .img {
