@@ -66,7 +66,7 @@ ul {
   display: block;
 }
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
@@ -149,11 +149,11 @@ ul {
 .link-icon {
   width: 16px;
   height: 11px;
-  color: #757575;
+  fill: #757575;
 }
-.link-icon:hover,
-.link-icon:focus {
-  color: var(--accent-color);
+.contacts-link:hover .link-icon,
+.contacts-link:focus .link-icon {
+  fill: var(--accent-color);
 }
 
 .contacts-list-item:not(:last-child) {
@@ -180,15 +180,17 @@ ul {
     url("../images/hero/Header\ img.jpg");
 
   content: "";
+  max-width: 1600px;
+  height: 600px;
 }
 
 .hero .container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  width: 915px;
+  padding-top: 152px;
+  padding-bottom: 180px;
 }
 
 .hero-titel {
@@ -224,18 +226,12 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.container .about-us {
-  display: flex;
-}
 
 .about-us {
   display: flex;
-  justify-content: center;
   flex-grow: 1;
   margin: 0;
   padding: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .about-us-list {
@@ -252,31 +248,29 @@ ul {
   border-radius: 4px;
 }
 
-.about-us-icon .icon {
+.about-us-icon {
   width: 70px;
   height: 70px;
 }
 
 .icon {
-  display: block;
+  display: flex;
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
-  padding: 25px 100px;
+  justify-content: center;
+  align-items: center;
 }
-
-/*
 
 .about-us-titel {
   margin-bottom: 10px;
-
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-}*/
+}
 
 .about-us-text {
   font-family: Roboto;
@@ -393,24 +387,33 @@ ul {
   margin-right: 10px;
 }
 
-.socials-links-item .link {
+.team-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
   width: 44px;
   height: 44px;
   margin: 0;
   padding: 0;
 }
 
-.link .socials-links-icon {
-  fill: #afb1b8;
+.team-link:hover,
+.team-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+.socials-links-icon:hover {
+  fill: #ffffff;
 }
 
 .socials-links-icon {
+  fill: #afb1b8;
   width: 20px;
   height: 20px;
+}
+
+.link .socials-links-icon:hover {
+  fill: #ffffff;
 }
 
 .post {
@@ -437,7 +440,11 @@ ul {
   margin: 0;
   padding: 0;
 }
-.customers-list-item {
+.customers-list-item .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 170px;
@@ -446,10 +453,17 @@ ul {
 .customers-list-item:not(:last-child) {
   margin-right: 30px;
 }
-.customers-list-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.customers-links-icon {
+  fill: #afb1b8;
+}
+
+.customers-list-item .link:hover {
+  border-color: var(--accent-color);
+}
+
+.customers-list-item .link:hover .customers-links-icon {
+  fill: var(--accent-color);
 }
 
 /* Footer */
@@ -518,37 +532,29 @@ ul {
   padding: 0;
 }
 .socials-list-item-icon:not(:last-child) {
-  margin-right: 22px;
+  margin-right: 10px;
 }
 
-.socials-links-item-icon .link {
+.link-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.icon-footer {
-  width: 20px;
-  height: 20px;
-}
-.link-footer {
-  display: block;
   width: 44px;
   height: 44px;
+  background-color: #afb1b8;
   border-radius: 50%;
-  /*background-image: radial-gradient(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1)
-  );*/
 }
 
-.link-footer .socials-links-icon {
+.socials-links-icon-footer {
+  width: 20px;
+  height: 20px;
   fill: #ffffff;
 }
 
-.socials-links-icon:focus,
-.socials-links-icon:hover {
-  fill: var(--accent-color);
+.link-footer:focus,
+.link-footer:hover {
+  background-color: var(--accent-color);
 }
 /* !!! PORTFOLIO!!! */
 
@@ -577,7 +583,21 @@ ul {
   background: #f5f4fa;
   border-radius: 4px;
 }
+.link-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+}
 
+.link-button:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 /*  Projects  */
 .container .gallery {
   display: flex;
